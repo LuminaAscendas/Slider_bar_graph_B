@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Slider Bar Graph</title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=5.0,minimum-scale=1.0, minimal-ui">
+	<meta name="HandheldFriendly" content="true"/>	
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="js/activity.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+</head>
+<body>
+	<div id='main' role="main" style="display: none"></div>
+	<div id='banner' role="banner" style="display: none"></div>
+	<div role='navigation' style='display:none'>No Navigation</div>
+<div class="mainConatiner" role="application">
+	<div class="loadDiv">
+		<div class="loader"></div>
+	</div>
+	<div class="beginPage" id="beginPageId">
+		<div id='focus_gaurd_1' role="none"></div>
+			<div id="midDivBegin">
+				<div class="slideImgBegin">
+					<img role="img" class="biganImg" src="images/7-14_slide21.png" alt="Age structures of Ethiopia, the United States, and Italy">
+				</div>
+				<div role="button" class="beginBtn" id="begin_btn" aria-label="Begin">Begin</div>
+			</div>
+		<div id='focus_gaurd_2' role="none"></div>	
+	</div>
+	<div id='focus_gaurd_3' role="none" style="display:none"></div>
+	<div id="textContainer">
+		<a href="#directionId" style="position: absolute;top: -200px;">Skip to direction text</a>
+		<h1 class="activityQuestion" id="directionId" role="heading" aria-level="1" aria-label="Directions:Drag the slider up along the right side of the graph to reveal the age structures of Ethiopia, the United States, and Italy.">
+			<span class="direction">Directions: </span> Drag the slider up along the right side of the graph to reveal the age structures of Ethiopia, the United States, and Italy.
+		</h1>
+		<div class="textDiv" role="none" id="pageContent"></div>
+	</div>	
+	<div class="topContent" id="responsive_container">
+		<div class="imageDiv"></div>
+		<img role="img" class="imgC" id="img1" src="./images/7-14_slide1.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img2" src="./images/7-14_slide2.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img3" src="./images/7-14_slide3.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img4" src="./images/7-14_slide4.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img5" src="./images/7-14_slide5.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img6" src="./images/7-14_slide6.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img7" src="./images/7-14_slide7.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img8" src="./images/7-14_slide8.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img9" src="./images/7-14_slide9.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img10" src="./images/7-14_slide10.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img11" src="./images/7-14_slide11.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img12" src="./images/7-14_slide12.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img13" src="./images/7-14_slide13.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img14" src="./images/7-14_slide14.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img15" src="./images/7-14_slide15.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img16" src="./images/7-14_slide16.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img17" src="./images/7-14_slide17.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img18" src="./images/7-14_slide18.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img19" src="./images/7-14_slide19.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img20" src="./images/7-14_slide20.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+		<img role="img" class="imgC" id="img21" src="./images/7-14_slide21.png" alt="Age structures of Ethiopia, the United States, and Italy"></img>
+
+		<div id="position_Analyzer">
+			<div id="internalDiv_Analyzer"></div>
+		</div>		
+	</div>
+	<div class="slider">
+		<div class="sliderBar">
+			<div id="slider" class="sliderCustomize"></div>
+		</div>
+		<div class="labels">
+			<div class="label" id="label1" ></div>
+			<div class="label" id="label2" ></div>
+			<div class="label" id="label3" ></div>
+			<div class="label" id="label4" ></div>
+			<div class="label" id="label5" ></div>
+			<div class="label" id="label6" ></div>
+			<div class="label" id="label7" ></div>
+			<div class="label" id="label8" ></div>
+			<div class="label" id="label9" ></div>
+			<div class="label" id="label10" ></div>
+			<div class="label" id="label11" ></div>
+			<div class="label" id="label12" ></div>
+			<div class="label" id="label13" ></div>
+			<div class="label" id="label14" ></div>
+			<div class="label" id="label15" ></div>
+			<div class="label" id="label16" ></div>
+			<div class="label" id="label17" ></div>
+			<div class="label" id="label18" ></div>
+			<div class="label" id="label19" ></div>
+			<div class="label" id="label20" ></div>
+			<div class="label" id="label21" ></div>
+		</div>
+	</div>
+	<div role="button" id="reset_btn" role="none" aria-label="Reset">Reset</div>
+	<div id='focus_gaurd_4' role="none" style="display:none"></div>
+</div>
+	<script>
+		$.holdReady(true);
+		var preloadComplete=false;
+		$.getScript("./js/preloadjs-0.6.2.min.js", function() {
+			$.holdReady(false);
+			manifest = [
+				"./images/loading.gif",
+				"./images/7-14_slide1.png",
+				"./images/7-14_slide2.png",			
+				"./images/7-14_slide3.png",				
+				"./images/7-14_slide4.png",				
+				"./images/7-14_slide5.png",				
+				"./images/7-14_slide6.png",
+				"./images/7-14_slide7.png",
+				"./images/7-14_slide8.png",			
+				"./images/7-14_slide9.png",				
+				"./images/7-14_slide10.png",				
+				"./images/7-14_slide11.png",				
+				"./images/7-14_slide12.png",				
+				"./images/7-14_slide13.png",
+				"./images/7-14_slide14.png",			
+				"./images/7-14_slide15.png",				
+				"./images/7-14_slide16.png",				
+				"./images/7-14_slide17.png",				
+				"./images/7-14_slide18.png",						
+				"./images/7-14_slide19.png",						
+				"./images/7-14_slide20.png",
+				"./images/7-14_slide21.png"	
+			];
+			preload = new createjs.LoadQueue(true);
+			preload.addEventListener("progress", function() {
+				//console.log('Updating preloading progress...'+Math.round(preload.progress*100)+"%");
+				$('.preload').remove();
+			});
+			preload.addEventListener("complete", function(){
+				setTimeout(function(){
+					$('.loadDiv').fadeOut();
+				},100)
+			});
+			preload.setMaxConnections(5);
+			preload.loadManifest(manifest);
+		});
+	</script>
+	<script type="text/javascript" src="js/preloadjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/fitToScreen.js"></script>
+</body>
+</html>
