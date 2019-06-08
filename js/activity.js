@@ -193,6 +193,7 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var dec = 100-decimalFirstVal;
            // console.log("jj  ",nxtImg-2)
             $('.textDiv').html(data[0].description[nxtImg-1.5]); //for text slide
+			$('.ui-slider-handle').attr('aria-label',data[0].sliderValue[roundVal-1]); 
 			$('.textDiv').attr('role','text'); 
 			var textSetTime = setTimeout(function(){			
 				$('.textDiv').attr('role','none'); 
