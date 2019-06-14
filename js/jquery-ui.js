@@ -12853,7 +12853,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 		var i, handleCount,
 			options = this.options,
 			existingHandles = this.element.find( ".ui-slider-handle" ).addClass( "ui-state-default ui-corner-all" ),
-			handle = "<span class='ui-slider-handle ui-state-default ui-corner-all' tabindex='0'></span>",
+			handle = "<div id='ui_handler' role='slider' class='ui-slider-handle ui-state-default ui-corner-all' aria-valuemin='0' aria-valuemax='100' aria-label='Ethiopia’s faster population growth rate is represented by the fact that a much higher proportion of its population is under reproductive age (0–14). Using  2015 data, the numbers of individuals shown here who were 0–4 years old represent the following percentages of each country’s total population: Ethiopia 14.7%, United States 6.1%, Italy 4.3 %. Note that the U.S. population is growing slowly but still more than Italy’s, so its proportion of prereproductive and reproductive individuals (15–44) is higher than Italy’s.'></div>",
 			handles = [];
 
 		handleCount = ( options.values && options.values.length ) || 1;
