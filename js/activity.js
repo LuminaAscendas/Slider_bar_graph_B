@@ -6,6 +6,9 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
         $(".topContent").hide();/*SB*/
 		$('.imageDiv').css({'background':'url(images/7-14_slide1.png)','background-repeat':'no-repeat'});
 		$('#img1').css('opacity','1');
+		
+
+		
 		if(!begin_entered){			
 			$('#begin_btn').attr("aria-label","Begin");
 			set_tab();
@@ -34,6 +37,8 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
               value:1,
               step:0.01,
               slide: function( event, ui ) {
+
+				  
 				//console.log("ui.value",ui.value)
 				var includeTop = event.keyCode != $.ui.keyCode.TOP;
 				var includeDown = event.keyCode != $.ui.keyCode.DOWN;
@@ -45,6 +50,8 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
               stop: function( event, ui ) {
                   adjustSlider(ui.value);
               }
+			    			  
+			  
             });
             $(".beginBtn").bind("click",fnBegin);
         });
@@ -68,6 +75,9 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 				$('#'+document.activeElement.id).trigger('click');
 			}
 		}
+		
+		
+
     });
 	window.onresize = function(){
 		resizeApp(); 
@@ -157,6 +167,7 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 	}
     function showTextFn(e){
 		   console.log('key:'+e.keyCode);
+		   
 		if(e.type=="keyup" && e.keyCode !=13){
             return  true;
         }
@@ -211,10 +222,10 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 //	}
 	
     function enable_scorm(event){
-
+		 
         $(this).addClass("ontab");
         if(event.type=="mousedown"){
-
+			
             //$(".tabindex").blur();
             $(".tabindex").removeClass("ontab");
         }
@@ -240,6 +251,7 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 		}
     }
     function adjustSlider(val){
+			 
         $( "#slider" ).slider("value",Math.round(val));
         displayImg(Math.round(val));
     }
@@ -335,3 +347,5 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 	
 })(player = player || {})
 var player
+
+/*slider track off */

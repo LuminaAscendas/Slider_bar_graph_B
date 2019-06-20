@@ -318,6 +318,8 @@ span{
     padding: 5px;
     font-size: 14px;
     width: 98%;
+	font-family: "SourceSansPro-Regular";
+	font-weight:normal;
 }
 .direction {
     color: #007098;
