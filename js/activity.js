@@ -58,7 +58,7 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
         setTimeout(function(){
 			$('.ui-slider-handle').addClass('customPlayhead tabindex')//.addClass('');
 			$('.ui-slider,.ui-slider-range').addClass('sliderRange');
-			$('.ui-slider-handle').bind('keyup mouseup',showTextFn);
+			//$('.ui-slider-handle').bind('keyup mouseup',showTextFn);
 			
 			// $('.customPlayhead').bind('mousedownmouseenter',mousedown)
 			// $('.customPlayhead').bind('mouseup mouseleave',mouseup)
@@ -72,13 +72,19 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 		document.body.onkeyup = function(e){
 			if(e.keyCode == 32 || e.keyCode == 13){
 				e.preventDefault();
+//				alert();
 				$('#'+document.activeElement.id).trigger('click');
 			}
 		}
-		
-		
+
+//	alert()
+//      return false;
+//});
 
     });
+	
+
+	
 	window.onresize = function(){
 		resizeApp(); 
 	}
@@ -222,7 +228,11 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 //	}
 	
     function enable_scorm(event){
-		 
+//		 	$('#ui_handler').off('click').on('click',function(){
+//				alert();
+//				$('#ui_handler').off('click')
+////				return false;
+//			});
         $(this).addClass("ontab");
         if(event.type=="mousedown"){
 			
