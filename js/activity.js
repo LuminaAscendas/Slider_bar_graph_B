@@ -187,10 +187,11 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 		$("#focus_gaurd_3").show();
 		$("#textContainer").show();
         $("#textContainer").css({"opacity":"1"});
-        $(".topContent").show();
-        $(".slider").show();
-        $("#reset_btn").show();
-		$("#focus_gaurd_4").show();
+        $(".topContent").fadeIn('500')
+        $(".slider").fadeIn('500')
+        $("#reset_btn").fadeIn('500')
+		$("#focus_gaurd_4").fadeIn('500')
+//		$('#responsive_container').fadeIn()
 		setTimeout(function(){
 			resizeApp(); 
 			setTabindex(0);
