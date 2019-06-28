@@ -187,10 +187,12 @@ var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 		$("#focus_gaurd_3").show();
 		$("#textContainer").show();
         $("#textContainer").css({"opacity":"1"});
-        $(".topContent").fadeIn('500')
-        $(".slider").fadeIn('500')
-        $("#reset_btn").fadeIn('500')
-		$("#focus_gaurd_4").fadeIn('500')
+//		setTimeout(function(){
+        $(".topContent").fadeIn(800)
+        $(".slider").fadeIn(800)
+        $("#reset_btn").fadeIn(800)
+		$("#focus_gaurd_4").fadeIn(800)
+//		},100);
 //		$('#responsive_container').fadeIn()
 		setTimeout(function(){
 			resizeApp(); 
